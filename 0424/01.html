@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.box{
+    width: 100px;
+    height: 100px;
+    position:absolute;
+  
+}
+.box:nth-child(1) {
+   
+ background-color: red;
+ top:10px;
+    left:10px;
+ z-index: 100;
+}
+.box:nth-child(2) {
+   
+   background-color: rgba(6, 65, 1, 0.658);
+   top:50px;
+    left:50px;
+    z-index: 50;
+  }
+  .box:nth-child(3) {
+   
+   background-color: rgb(11, 24, 209);
+   top:90px;
+    left:90px;
+    z-index: 1; /*숫자 높을수록 순서가 더높음)
+}
+
+
+</style>
+</head>
+<body>
+    <div class = "box" ></div>
+    <div class = "box" ></div>
+    <div class = "box" ></div>
+</body>
+</html>
