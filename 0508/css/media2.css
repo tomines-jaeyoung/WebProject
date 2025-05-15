@@ -1,0 +1,5 @@
+@media print {
+    body{
+        background-color:rgb(194, 21, 21); /* 인쇄할 때 배경색 변경 */
+    }
+}   
