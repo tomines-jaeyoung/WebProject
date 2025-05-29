@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <script>
+    let img;
+
+    function changeImage() {
+      img = document.getElementById("img1");
+      let select = document.querySelector("select");
+      let selectedValue = select.value;
+
+      if (selectedValue) {
+        img.src = selectedValue;
+      } else {
+        img.src = "imgs/이재명_롤.jpg"; // 기본 이미지
+      }
+
+      img.width = 600;
+    }
+
+    function reset() {
+      img = document.getElementById("img1");
+      img.src = "";
+      img.width = 0;
+    }
+    function cheerUp() {
+      //사용자 정의 속성을 BODY요소 객체에 설정하려고한다
+      document.body.setAttribute("data-cheerup", "Next president is Lee Jae-myung!");
+    alert(document.body.getAttribute("data-cheerup"));
+      // document.body.setAttribute("data-cheerup", "Next president is Lee Jae-myung!");
+      // alert(document.body.getAttribute("data-cheerup"));
+    }
+  </script>
+</head>
+<body>
+  <button onclick="changeImage()">차기대통령</button>
+  <button onclick="reset()">Reset</button>
+  <button onclick ="cheerUp()">CHEER-UP</button>
+  <br>
+  <select>
+    <option value="">Select an image</option>
+    <option value="imgs/이재명_롤.jpg">이재명 롤</option>
+    <option value="imgs/이재명_롤1.png">이재명의 주먹</option>
+    <option value="imgs/이재명_롤2.png">이재명의 웃음</option>
+    <option value="imgs/이재명_롤3.png">이재명의 화남</option>
+  </select>
+  <hr>
+  <img id="img1">
+</body>
+</html>
