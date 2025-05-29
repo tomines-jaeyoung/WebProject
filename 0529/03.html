@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>그라데이션 박스</title>
+    <style>
+        #box {
+            width: 256px;
+            height: 256px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        function applyGradient() {
+            let output = "";
+            for (let i = 0; i < 256; i++) {
+                output += "<div></div>";
+            }
+            document.getElementById("box").innerHTML = output;
+
+            let divs = document.querySelectorAll("#box div");
+            for (let i = 0; i < divs.length; i++) {
+                divs[i].style.height = "1px";
+                divs[i].style.backgroundColor = "rgb(" + i + "," + i + "," + i + ")";
+            }
+        }
+
+        function removeGradient() {
+            document.getElementById("box").innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="applyGradient()">그라데이션 넣기</button>
+    <button onclick="removeGradient()">그라데이션 없애기</button>
+
+    <div id="box"></div>
+</body>
+</html>
