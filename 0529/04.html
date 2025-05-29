@@ -33,12 +33,24 @@
       // document.body.setAttribute("data-cheerup", "Next president is Lee Jae-myung!");
       // alert(document.body.getAttribute("data-cheerup"));
     }
+    function setClock(){
+        let now = new Date();
+      clock.innerHTML = now.toString();
+    
+    }
+    let clock;
+    function callSetClock() {
+        clock = document.querySelector("h1");
+     setInterval(setClock, 1000); // 1초마다 setClock 함수 호출
+     
+    }
   </script>
 </head>
-<body>
+<body onload="callSetClock()">
   <button onclick="changeImage()">차기대통령</button>
   <button onclick="reset()">Reset</button>
   <button onclick ="cheerUp()">CHEER-UP</button>
+  
   <br>
   <select>
     <option value="">Select an image</option>
@@ -49,5 +61,11 @@
   </select>
   <hr>
   <img id="img1">
+   <hr>
+   <h1>
+
+
+   </h1>
+   <hr>
 </body>
 </html>
