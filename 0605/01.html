@@ -19,19 +19,25 @@ let text = "이재명은 차기대통령감이다";
 function increamentStar(btn){
     btn.textContent = "★" }
 
+function removeDefault(){
+    event.preventDefault();
+}
 </script>
 
 
 
 </head>
 <body>
+    <a href="../0529.04.html" onclick="removeDefault(this)">자바 스크립트 연습 </a>
+    <br><br>
     <button onclick="callAlert()">알림메세지</button>
     <br><br>
     <button onclick="increamentStar(this)">버튼</button>
     <br><br>
     <img src="imgs/이재명.시작전.jpg" onmouseover="this.src='imgs/이재명_롤2.png'" onmouseout="this.src='imgs/이재명.시작전.jpg' "/>
-    <img id="img1" src="imgs/이재명_롤.jpg" onmouseover="overImageId()" onmouseout="this.src='imgs/이재명_롤.jpg'" width="600">
-    <img id="img3" src="imgs/이재명.시작전.jpg" onmouseover="overImageId()" onmouseout="this.src='imgs/이재명.시작전.jpg'" width="600">
-
+   <br><br>
+    <img src="imgs/이재명.시작전.jpg" onmouseover="overImage(this)" onmouseover="overImage(this)"/>
+<br><br>
+<imgs src="imgs/이재명.시작전.jpg" onmouseover="overImageId()" onmouseout="outImageID()" id="img3"/>
 </body>
 </html>
