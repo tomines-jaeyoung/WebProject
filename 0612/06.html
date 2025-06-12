@@ -20,18 +20,25 @@
    </style>
    <script>
         $(document).ready(function() {
-            $("#box").hover(
-                function() {
-                    $("#box").addClass("hover");
+            $("h1").hover(
+                function()
+                 {
+                    $("h1").css(
+                    {
+                        color: "white",
+                        backgroundColor: "red",
+                    });
                 },
                 function() {
-                    $("#box").removeClass("hover");
+                    $("h1").css({color: "",
+                        backgroundColor: ""
+                    });
                 }
             );
         });
     </script>
 </head>
 <body>
-   <div id="box"></div>
+   <div>Hover over the box</div>
 </body>
 </html>
