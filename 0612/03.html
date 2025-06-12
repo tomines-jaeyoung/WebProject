@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jquery Basic(11장 390쪽)</title>
+    <!-- jQuery 사용 시 필요한 코드 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
-        $(document).ready(
-            function(){
-                $('h1:nth-child(1)').text("<a href='https://www.kopo.ac.kr'>text()</a>");
-                $('h1:nth-child(2)').html("<a href='https://www.kopo.ac.kr'>text()</a>");
-            }
-        );
+        $(document).ready(function() {
+            let text = $("h1").text();
+            let html = $("h1").html();
+
+            alert("text(): "+text);
+            alert("html(): "+html);
+        });
     </script>
 </head>
 <body>
